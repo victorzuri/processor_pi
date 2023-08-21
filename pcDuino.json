@@ -1,0 +1,53 @@
+{
+  "name": "PCduino V3",
+  "platforms": [
+    {
+      "architecture": "x86",
+      "category": "Contributed",
+      "url": "http://www.pcduino.com/",
+      "email": "info@pcduino.com",
+      "help": {
+        "online": "http://www.pcduino.com/",
+        "offline": ""
+      },
+      "version": "1.0.0",
+      "boards": [
+        {
+          "name": "PCduino V3",
+          "upload": {
+            "maximum_size": 262144,
+            "protocol": "stk500v2",
+            "timeout": 200,
+            "speed": 57600
+          },
+          "boot": {
+            "path": "stk500v2",
+            "file": "pcduino_v3.hex",
+            "size": "512B",
+            "unlock_bits": "0x3F",
+            "lock_bits": "0xFF"
+          },
+          "fuses": {
+            "low": "0xFF",
+            "high": "0xDA",
+            "extended": "0x05"
+          },
+          "parameters": [
+            {
+              "name": "cpu",
+              "value": "atmega328p"
+            },
+            {
+              "name": "f_cpu",
+              "value": "16000000L"
+            },
+            {
+              "name": "vcc",
+              "value": "5V"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
